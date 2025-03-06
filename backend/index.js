@@ -27,11 +27,13 @@ app.use(
 
 app.use(
   cors({
-    origin: "*", // Allow all origins
-    credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+    origin: [
+      "https://course-provider-gamma.vercel.app", // New frontend URL
+      "https://course-provider-fv8vuvw2d-ashish6667s-projects.vercel.app" // Previously allowed frontend URL
+    ],
+    credentials: true, // Allow credentials
   })
 );
-
 
 
 const port = process.env.PORT || 3000;
