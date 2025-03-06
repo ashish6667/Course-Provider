@@ -25,7 +25,12 @@ app.use(
 })
 );
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://course-provider-fv8vuvw2d-ashish6667s-projects.vercel.app", // Replace with your actual frontend URL
+    credentials: true, // Allow credentials
+  })
+);
 
 const port = process.env.PORT || 3000;
 const DB_URI = process.env.MONGO_URI;
