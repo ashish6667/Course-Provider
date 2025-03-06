@@ -24,14 +24,8 @@ app.use(
   tempFileDir : '/tmp/',
 })
 );
-app.use(
-  cors({
- origin: process.env.FRONTEND_URL,
-  credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowHeaders: ["Content-Type", "Authorization"],
-})
-);
+
+app.use(cors());
 
 const port = process.env.PORT || 3000;
 const DB_URI = process.env.MONGO_URI;
