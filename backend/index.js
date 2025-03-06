@@ -27,10 +27,14 @@ app.use(
 
 app.use(
   cors({
-    origin: "https://course-provider-fv8vuvw2d-ashish6667s-projects.vercel.app", // Replace with your actual frontend URL
+    origin: [
+      "https://course-provider-gamma.vercel.app", // New frontend URL
+      "https://course-provider-fv8vuvw2d-ashish6667s-projects.vercel.app" // Previously allowed frontend URL
+    ],
     credentials: true, // Allow credentials
   })
 );
+
 
 const port = process.env.PORT || 3000;
 const DB_URI = process.env.MONGO_URI;
